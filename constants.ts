@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ModalType } from './types';
 import { InstagramIcon, FacebookIcon, TiktokIcon, CatalogIcon, WhatsappIcon, LocationIcon, RatingIcon } from './components/Icons';
@@ -33,7 +32,7 @@ export const BIBLE_VERSES: string[] = [
 export const LINKS = [
     { name: 'Instagram', url: 'https://www.instagram.com/frutariabenetti/', icon: React.createElement(InstagramIcon), type: 'link' },
     { name: 'Facebook', url: 'https://www.facebook.com/frutariabenetti1', icon: React.createElement(FacebookIcon), type: 'link' },
-    { name: 'TikTok', url: '#', icon: React.createElement(TiktokIcon), type: 'link' },
+    { name: 'TikTok', url: 'https://www.tiktok.com/@frutariabenetti', icon: React.createElement(TiktokIcon), type: 'link' },
     { name: 'Catálogo', icon: React.createElement(CatalogIcon), type: 'modal', modalType: ModalType.CATALOG },
     { name: 'WhatsApp', icon: React.createElement(WhatsappIcon), type: 'modal', modalType: ModalType.WHATSAPP },
     { name: 'Localização', icon: React.createElement(LocationIcon), type: 'modal', modalType: ModalType.LOCATION },

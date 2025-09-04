@@ -11,6 +11,7 @@
         
         body {
             font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
         }
 
         @keyframes gradient-animation {
@@ -80,6 +81,36 @@
         .coin-back {
             transform: rotateY(180deg);
             background-color: #f0fdf4; /* A light green to match theme */
+        }
+
+        /* Custom Scrollbar Styling for larger screens */
+        @media (min-width: 768px) {
+            /* For Webkit Browsers (Chrome, Safari, Edge) */
+            ::-webkit-scrollbar {
+                width: 12px;
+            }
+
+            ::-webkit-scrollbar-track {
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 20px;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background-color: #16a34a; /* green-600 */
+                border-radius: 20px;
+                border: 3px solid transparent;
+                background-clip: content-box;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                 background-color: #15803d; /* green-700 */
+            }
+
+            /* For Firefox */
+            html {
+                scrollbar-width: thin;
+                scrollbar-color: #16a34a rgba(255, 255, 255, 0.1);
+            }
         }
     </style>
 <script type="importmap">

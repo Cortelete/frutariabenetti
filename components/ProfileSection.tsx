@@ -65,10 +65,10 @@ const ProfileSection: React.FC<ProfileSectionProps> = ({ verses }) => {
             <img 
                 src="/logo.png" 
                 alt="Frutaria Benetti Logo"
-                className="mt-3 w-4/5 max-w-[240px]"
+                className="mt-4 w-full max-w-[300px]"
             />
 
-            <p className="mt-2 text-xs md:text-sm text-lime-100 min-h-[36px] transition-opacity duration-1000 flex items-center justify-center">
+            <p className="mt-2 text-xs md:text-sm text-green-900 font-semibold min-h-[36px] transition-opacity duration-1000 flex items-center justify-center">
                 "{verses[verseIndex]}"
             </p>
         </div>
