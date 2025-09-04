@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frutaria Benetti</title>
+    <link id="favicon" rel="icon" href="/logo.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .animate-gradient {
+            background-size: 200% 200%;
+            animation: gradient-animation 15s ease infinite;
+        }
+
+        .animate-text-gradient {
+            background-size: 200% 200%;
+            animation: gradient-animation 8s ease infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); opacity: 0.8; }
+            25% { transform: translateY(-15px) rotate(5deg); opacity: 1; }
+            50% { transform: translateY(0px) rotate(0deg); opacity: 0.8; }
+            75% { transform: translateY(15px) rotate(-5deg); opacity: 0.7; }
+            100% { transform: translateY(0px) rotate(0deg); opacity: 0.8; }
+        }
+
+        .animate-float {
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .coin-container {
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .coin {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 2s cubic-bezier(0.25, 1, 0.5, 1);
+            transform-style: preserve-3d;
+        }
+
+        .coin.flipping {
+            transform: rotateY(1800deg); /* 5 full spins */
+        }
+
+        .coin-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden; /* Safari */
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9999px; /* Make faces round */
+        }
+
+        .coin-front img {
+             width: 100%;
+             height: 100%;
+             object-fit: cover;
+             border-radius: 9999px;
+        }
+
+        .coin-back {
+            transform: rotateY(180deg);
+            background-color: #f0fdf4; /* A light green to match theme */
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
