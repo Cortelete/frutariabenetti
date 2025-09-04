@@ -40,7 +40,7 @@ export const LINKS = [
 ] as const;
 
 export const DEVELOPER_PHONE = '5541988710303';
-export const CLIENT_PHONE = '5542998005535';
+export const CLIENT_PHONE = '5542991666452';
 export const GOOGLE_REVIEW_URL = 'https://search.google.com/local/writereview?placeid=ChIJrbCTLOYd6JQRePKfoPOdXyc';
 export const MAP_EMBED_URL = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.90530360312!2d-50.102784799999995!3d-25.1050667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e81de62c93b0ad%3A0x275f9df3a09ff278!2sFrutaria%20Benetti!5e0!3m2!1spt-BR!2sbr!4v1756963521951!5m2!1spt-BR!2sbr';
 export const MAP_DIRECTION_URL = 'https://www.google.com/maps/dir/?api=1&destination=Frutaria+Benetti';
