@@ -68,7 +68,7 @@ const ProfileSection: React.FC<ProfileSectionProps> = ({ verses }) => {
                 className="mt-4 w-full max-w-[300px]"
             />
 
-            <p className="mt-2 text-xs md:text-sm text-green-900 font-semibold min-h-[36px] transition-opacity duration-1000 flex items-center justify-center">
+            <p className="mt-2 text-xs md:text-sm text-green-950 font-bold min-h-[36px] transition-opacity duration-1000 flex items-center justify-center [text-shadow:_0_1px_2px_rgb(255_255_255_/_60%)]">
                 "{verses[verseIndex]}"
             </p>
         </div>

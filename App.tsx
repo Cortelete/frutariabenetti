@@ -134,11 +134,11 @@ Estou buscando: ${query}`;
             {fruits.map(fruit => (
                 <Fruit key={fruit.id} {...fruit} />
             ))}
-            <div className="fixed inset-0 -z-20 w-full h-full bg-gradient-to-br from-lime-500 via-green-300 to-lime-500 animate-gradient" />
+            <div className="fixed inset-0 -z-20 w-full h-full bg-gradient-to-br from-green-900 via-gray-900 to-black" />
             
             <div className="relative min-h-screen flex flex-col items-center justify-center p-4 overflow-x-hidden">
                 <main className="w-full max-w-md mx-auto">
-                    <div className="relative bg-lime-500/75 text-white backdrop-blur-xl rounded-2xl shadow-2xl p-4 md:p-6 border border-white/20">
+                    <div className="relative bg-gradient-to-r from-lime-400 via-green-500 to-emerald-600 animate-gradient text-white rounded-2xl shadow-2xl p-4 md:p-6 border border-white/20">
                         
                         <ProfileSection verses={BIBLE_VERSES} />
                         
