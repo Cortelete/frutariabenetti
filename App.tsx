@@ -129,6 +129,9 @@ Estou buscando: ${query}`;
         handleCloseModal();
     };
 
+    const socialLinks = LINKS.slice(0, 3);
+    const mainLinks = LINKS.slice(3);
+
     return (
         <>
             {fruits.map(fruit => (
@@ -143,7 +146,17 @@ Estou buscando: ${query}`;
                         <ProfileSection verses={BIBLE_VERSES} />
                         
                         <div className="mt-4 space-y-2">
-                            {LINKS.map(link => (
+                            <div className="flex items-center gap-2">
+                                {socialLinks.map(link => (
+                                    <LinkButton
+                                        key={link.name}
+                                        {...link}
+                                        variant="small"
+                                        onClick={link.type === 'modal' ? () => handleLinkClick(link.modalType!) : undefined}
+                                    />
+                                ))}
+                            </div>
+                            {mainLinks.map(link => (
                                 <LinkButton 
                                     key={link.name} 
                                     {...link} 
