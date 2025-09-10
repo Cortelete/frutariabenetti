@@ -11,7 +11,7 @@ const Footer: React.FC<FooterProps> = ({ developerPhone }) => {
     const ctaUrl = `https://wa.me/${developerPhone}?text=${encodeURIComponent(ctaMessage)}`;
 
     return (
-        <footer className="w-full max-w-md mx-auto text-center mt-8 pb-4 px-4">
+        <footer className="w-full max-w-md mx-auto text-center mt-4 pb-2 px-4">
             <a 
                 href={ctaUrl} 
                 target="_blank" 

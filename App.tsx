@@ -136,13 +136,13 @@ Estou buscando: ${query}`;
             ))}
             <div className="fixed inset-0 -z-20 w-full h-full bg-gradient-to-br from-green-900 via-gray-900 to-black" />
             
-            <div className="relative min-h-screen flex flex-col items-center justify-center p-4 overflow-x-hidden">
+            <div className="relative h-[100dvh] flex flex-col items-center justify-center p-2 sm:p-4 overflow-hidden">
                 <main className="w-full max-w-md mx-auto">
-                    <div className="relative bg-gradient-to-r from-lime-400 via-green-500 to-emerald-600 animate-gradient text-white rounded-2xl shadow-2xl p-4 md:p-6 border border-white/20">
+                    <div className="relative bg-gradient-to-r from-lime-400 via-green-500 to-emerald-600 animate-gradient text-white rounded-2xl shadow-2xl p-3 md:p-6 border border-white/20">
                         
                         <ProfileSection verses={BIBLE_VERSES} />
                         
-                        <div className="mt-6 space-y-3">
+                        <div className="mt-4 space-y-2">
                             {LINKS.map(link => (
                                 <LinkButton 
                                     key={link.name} 

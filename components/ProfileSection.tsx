@@ -41,7 +41,7 @@ const ProfileSection: React.FC<ProfileSectionProps> = ({ verses }) => {
     return (
         <div className="flex flex-col items-center text-center">
             <div 
-                className="w-24 h-24 md:w-28 md:h-28 coin-container" 
+                className="w-20 h-20 md:w-28 md:h-28 coin-container" 
                 onClick={handleLogoClick} 
                 title="Clique para girar!"
                 role="button"
@@ -65,10 +65,10 @@ const ProfileSection: React.FC<ProfileSectionProps> = ({ verses }) => {
             <img 
                 src="/logo.png" 
                 alt="Frutaria Benetti Logo"
-                className="mt-4 w-full max-w-[300px]"
+                className="mt-2 w-full max-w-[300px]"
             />
 
-            <p className="mt-2 text-xs md:text-sm text-green-950 font-bold min-h-[36px] transition-opacity duration-1000 flex items-center justify-center [text-shadow:_0_1px_2px_rgb(255_255_255_/_60%)]">
+            <p className="mt-1 text-xs md:text-sm text-green-950 font-bold min-h-[30px] transition-opacity duration-1000 flex items-center justify-center [text-shadow:_0_1px_2px_rgb(255_255_255_/_60%)]">
                 "{verses[verseIndex]}"
             </p>
         </div>
