@@ -1,12 +1,11 @@
-
 import React, { useState, useEffect } from 'react';
 import { ModalType } from './types';
-import { BIBLE_VERSES, LINKS, DEVELOPER_PHONE, CLIENT_PHONE, GOOGLE_REVIEW_URL, MAP_EMBED_URL, MAP_DIRECTION_URL } from './constants';
+import { BIBLE_VERSES, LINKS, DEVELOPER_PHONE, CLIENT_PHONE, GOOGLE_REVIEW_URL, MAP_EMBED_URL_UVARANAS, MAP_DIRECTION_URL_UVARANAS, MAP_EMBED_URL_CARA_CARA, MAP_DIRECTION_URL_CARA_CARA } from './constants';
 import ProfileSection from './components/ProfileSection';
 import LinkButton from './components/LinkButton';
 import Footer from './components/Footer';
 import Modal from './components/Modal';
-import { StarIcon, XMarkIcon, PaperAirplaneIcon, MapPinIcon } from './components/Icons';
+import { StarIcon, XMarkIcon, PaperAirplaneIcon, MapPinIcon, ChevronRightIcon } from './components/Icons';
 
 // Sub-component to prevent re-renders
 const Fruit = ({ emoji, size, top, left, animationDelay, blur, opacity }: { emoji: string; size: string; top: string; left: string; animationDelay: string; blur: string; opacity: number }) => (
@@ -175,21 +174,65 @@ Estou buscando: ${query}`;
                 <p className="mt-4 text-center text-lg text-gray-700">Em construção...</p>
                 <p className="mt-2 text-center text-3xl">🚧</p>
             </Modal>
+
+            <Modal isOpen={activeModal === ModalType.LOCATION_CHOICE} onClose={handleCloseModal}>
+                <h2 className="text-xl sm:text-2xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-emerald-700">Escolha a loja mais próxima</h2>
+                <p className="text-center text-sm text-gray-600 mt-1 mb-4">Temos duas unidades para melhor te atender.</p>
+                <div className="mt-4 space-y-3">
+                    <button onClick={() => setActiveModal(ModalType.LOCATION_UVARANAS)} className="w-full flex items-center text-left p-4 rounded-lg bg-gray-100 hover:bg-green-100 hover:border-green-400 border border-transparent transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-500">
+                        <MapPinIcon />
+                        <div className="ml-4 flex-grow">
+                            <p className="font-semibold text-gray-800">Loja Uvaranas</p>
+                            <p className="text-xs text-gray-500">Av. Carlos Cavalcanti, 4296</p>
+                        </div>
+                        <ChevronRightIcon />
+                    </button>
+                    <button onClick={() => setActiveModal(ModalType.LOCATION_CARA_CARA)} className="w-full flex items-center text-left p-4 rounded-lg bg-gray-100 hover:bg-green-100 hover:border-green-400 border border-transparent transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-500">
+                        <MapPinIcon />
+                        <div className="ml-4 flex-grow">
+                             <p className="font-semibold text-gray-800">Loja Nova PG (Cará-Cará)</p>
+                            <p className="text-xs text-gray-500">R. Holga Holleben Mello, 165</p>
+                        </div>
+                         <ChevronRightIcon />
+                    </button>
+                </div>
+            </Modal>
             
-            <Modal isOpen={activeModal === ModalType.LOCATION} onClose={handleCloseModal}>
-                 <h2 className="text-xl sm:text-2xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-emerald-700">Nossa Localização</h2>
+            <Modal isOpen={activeModal === ModalType.LOCATION_UVARANAS} onClose={handleCloseModal}>
+                 <h2 className="text-xl sm:text-2xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-emerald-700">Nossa Loja - Uvaranas</h2>
                  <div className="mt-4 aspect-video w-full rounded-lg overflow-hidden border-2 border-green-500/50">
                     <iframe
-                        src={MAP_EMBED_URL}
+                        src={MAP_EMBED_URL_UVARANAS}
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
                         allowFullScreen={true}
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
+                        title="Mapa da Frutaria Benetti em Uvaranas"
                     ></iframe>
                  </div>
-                 <a href={MAP_DIRECTION_URL} target="_blank" rel="noopener noreferrer" className="mt-4 w-full flex items-center justify-center gap-2 bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-4 rounded-lg transition-transform transform hover:scale-105">
+                 <a href={MAP_DIRECTION_URL_UVARANAS} target="_blank" rel="noopener noreferrer" className="mt-4 w-full flex items-center justify-center gap-2 bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-4 rounded-lg transition-transform transform hover:scale-105">
+                    <MapPinIcon />
+                    Ver no Google Maps
+                </a>
+            </Modal>
+
+            <Modal isOpen={activeModal === ModalType.LOCATION_CARA_CARA} onClose={handleCloseModal}>
+                 <h2 className="text-xl sm:text-2xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-emerald-700">Nossa Loja - Nova PG (Cará-Cará)</h2>
+                 <div className="mt-4 aspect-video w-full rounded-lg overflow-hidden border-2 border-green-500/50">
+                    <iframe
+                        src={MAP_EMBED_URL_CARA_CARA}
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen={true}
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="Mapa da Frutaria Benetti em Cará-Cará"
+                    ></iframe>
+                 </div>
+                 <a href={MAP_DIRECTION_URL_CARA_CARA} target="_blank" rel="noopener noreferrer" className="mt-4 w-full flex items-center justify-center gap-2 bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-4 rounded-lg transition-transform transform hover:scale-105">
                     <MapPinIcon />
                     Ver no Google Maps
                 </a>

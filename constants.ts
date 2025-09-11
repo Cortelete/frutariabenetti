@@ -35,12 +35,18 @@ export const LINKS = [
     { name: 'TikTok', url: 'https://www.tiktok.com/@frutariabenetti', icon: React.createElement(TiktokIcon), type: 'link' },
     { name: 'Catálogo', icon: React.createElement(CatalogIcon), type: 'modal', modalType: ModalType.CATALOG },
     { name: 'WhatsApp', icon: React.createElement(WhatsappIcon), type: 'modal', modalType: ModalType.WHATSAPP },
-    { name: 'Localização', icon: React.createElement(LocationIcon), type: 'modal', modalType: ModalType.LOCATION },
+    { name: 'Nossas Lojas', icon: React.createElement(LocationIcon), type: 'modal', modalType: ModalType.LOCATION_CHOICE },
     { name: 'Avalie-nos', icon: React.createElement(RatingIcon), type: 'modal', modalType: ModalType.RATING },
 ] as const;
 
 export const DEVELOPER_PHONE = '5541988710303';
 export const CLIENT_PHONE = '5542991666452';
 export const GOOGLE_REVIEW_URL = 'https://search.google.com/local/writereview?placeid=ChIJrbCTLOYd6JQRePKfoPOdXyc';
-export const MAP_EMBED_URL = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.90530360312!2d-50.102784799999995!3d-25.1050667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e81de62c93b0ad%3A0x275f9df3a09ff278!2sFrutaria%20Benetti!5e0!3m2!1spt-BR!2sbr!4v1756963521951!5m2!1spt-BR!2sbr';
-export const MAP_DIRECTION_URL = 'https://www.google.com/maps/dir/?api=1&destination=Frutaria+Benetti';
+
+// Location Uvaranas
+export const MAP_EMBED_URL_UVARANAS = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.90530360312!2d-50.102784799999995!3d-25.1050667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e81de62c93b0ad%3A0x275f9df3a09ff278!2sFrutaria%20Benetti!5e0!3m2!1spt-BR!2sbr!4v1756963521951!5m2!1spt-BR!2sbr';
+export const MAP_DIRECTION_URL_UVARANAS = 'https://www.google.com/maps/dir/?api=1&destination=Frutaria+Benetti';
+
+// Location Cará-Cará
+export const MAP_EMBED_URL_CARA_CARA = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.3295903580292!2d-50.127430788351774!3d-25.124545677665008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e81b3ec51d35f9%3A0x92d09f7e25c92081!2sR.%20Holga%20Holleben%20Mello%2C%20165%20-%20Car%C3%A1-Car%C3%A1%2C%20Ponta%20Grossa%20-%20PR%2C%2084033-897!5e0!3m2!1spt-BR!2sbr!4v1757610903467!5m2!1spt-BR!2sbr';
+export const MAP_DIRECTION_URL_CARA_CARA = 'https://www.google.com/maps/dir/?api=1&destination=R.+Holga+Holleben+Mello,+165+-+Cará-Cará,+Ponta+Grossa+-+PR';

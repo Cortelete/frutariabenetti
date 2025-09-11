@@ -68,6 +68,12 @@ export const MapPinIcon: React.FC = () => (
     </svg>
 );
 
+export const ChevronRightIcon: React.FC = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 text-gray-400">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+    </svg>
+);
+
 
 export const StarIcon: React.FC<{ filled: boolean }> = ({ filled }) => (
     <svg xmlns="http://www.w3.org/2000/svg" className={`w-10 h-10 transition-colors duration-200 ${filled ? 'text-yellow-400' : 'text-gray-600 hover:text-yellow-500'}`} viewBox="0 0 24 24" fill={filled ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
