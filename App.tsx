@@ -139,14 +139,12 @@ Estou buscando: ${query}`;
             <div className="fixed inset-0 -z-20 w-full h-full bg-gradient-to-br from-green-900 via-gray-900 to-black" />
             
             <div className="relative h-[100dvh] flex flex-col items-center justify-center p-2 sm:p-4 overflow-hidden">
-                <img 
-                    src="/outubrorosa.png" 
-                    alt="Laço Outubro Rosa" 
-                    className="absolute top-4 left-4 w-12 h-12 z-10"
-                    title="A Frutaria Benetti apoia o Outubro Rosa"
-                />
                 <main className="w-full max-w-md mx-auto">
                     <div className="relative bg-gradient-to-r from-lime-400 via-green-500 to-emerald-600 animate-gradient text-white rounded-2xl shadow-2xl p-3 md:p-6 border border-white/20">
+                        
+                        <div className="absolute top-2 left-2 transform -rotate-12" title="Outubro Rosa">
+                            <img src="/outubrorosa.png" alt="Símbolo do Outubro Rosa" className="w-12 h-auto drop-shadow-lg" />
+                        </div>
                         
                         <ProfileSection verses={BIBLE_VERSES} />
                         
