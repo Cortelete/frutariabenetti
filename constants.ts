@@ -50,3 +50,7 @@ export const MAP_DIRECTION_URL_UVARANAS = 'https://www.google.com/maps/dir/?api=
 // Location Cará-Cará
 export const MAP_EMBED_URL_CARA_CARA = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.3295903580292!2d-50.127430788351774!3d-25.124545677665008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e81b3ec51d35f9%3A0x92d09f7e25c92081!2sR.%20Holga%20Holleben%20Mello%2C%20165%20-%20Car%C3%A1-Car%C3%A1%2C%20Ponta%20Grossa%20-%20PR%2C%2084033-897!5e0!3m2!1spt-BR!2sbr!4v1757610903467!5m2!1spt-BR!2sbr';
 export const MAP_DIRECTION_URL_CARA_CARA = 'https://www.google.com/maps/dir/?api=1&destination=R.+Holga+Holleben+Mello,+165+-+Cará-Cará,+Ponta+Grossa+-+PR';
+
+// Location Ventania
+export const MAP_EMBED_URL_VENTANIA = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3637.7838128710864!2d-50.244581000000004!3d-24.24933889999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e9ee401b26677f%3A0xe1020ec3ee15982f!2sAv.%20Anacleto%20Bueno%20de%20Camargo%2C%20987%20-%20Ventania%2C%20PR%2C%2084345-000!5e0!3m2!1spt-BR!2sbr!4v1760557388483!5m2!1spt-BR!2sbr';
+export const MAP_DIRECTION_URL_VENTANIA = 'https://www.google.com/maps/dir/?api=1&destination=Av.+Anacleto+Bueno+de+Camargo,+987+-+Ventania,+PR';

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ModalType } from './types';
-import { BIBLE_VERSES, LINKS, DEVELOPER_PHONE, CLIENT_PHONE, GOOGLE_REVIEW_URL, MAP_EMBED_URL_UVARANAS, MAP_DIRECTION_URL_UVARANAS, MAP_EMBED_URL_CARA_CARA, MAP_DIRECTION_URL_CARA_CARA } from './constants';
+import { BIBLE_VERSES, LINKS, DEVELOPER_PHONE, CLIENT_PHONE, GOOGLE_REVIEW_URL, MAP_EMBED_URL_UVARANAS, MAP_DIRECTION_URL_UVARANAS, MAP_EMBED_URL_CARA_CARA, MAP_DIRECTION_URL_CARA_CARA, MAP_EMBED_URL_VENTANIA, MAP_DIRECTION_URL_VENTANIA } from './constants';
 import ProfileSection from './components/ProfileSection';
 import LinkButton from './components/LinkButton';
 import Footer from './components/Footer';
@@ -181,25 +181,44 @@ Estou buscando: ${query}`;
 
             <Modal isOpen={activeModal === ModalType.LOCATION_CHOICE} onClose={handleCloseModal}>
                 <h2 className="text-xl sm:text-2xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-emerald-700">Escolha a loja mais próxima</h2>
-                <p className="text-center text-sm text-gray-600 mt-1 mb-4">Temos duas unidades para melhor te atender.</p>
-                <div className="mt-4 space-y-3">
-                    <button onClick={() => setActiveModal(ModalType.LOCATION_UVARANAS)} className="w-full flex items-center text-left p-4 rounded-lg bg-gray-100 hover:bg-green-100 hover:border-green-400 border border-transparent transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-500">
-                        <MapPinIcon />
-                        <div className="ml-4 flex-grow">
-                            <p className="font-semibold text-gray-800">Loja Uvaranas</p>
-                            <p className="text-xs text-gray-500">Av. Carlos Cavalcanti, 4296</p>
-                        </div>
-                        <ChevronRightIcon />
-                    </button>
-                    <button onClick={() => setActiveModal(ModalType.LOCATION_CARA_CARA)} className="w-full flex items-center text-left p-4 rounded-lg bg-gray-100 hover:bg-green-100 hover:border-green-400 border border-transparent transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-500">
-                        <MapPinIcon />
-                        <div className="ml-4 flex-grow">
-                             <p className="font-semibold text-gray-800">Loja Nova PG (Cará-Cará)</p>
-                            <p className="text-xs text-gray-500">R. Holga Holleben Mello, 165</p>
-                        </div>
-                         <ChevronRightIcon />
-                    </button>
+                <p className="text-center text-sm text-gray-600 mt-1 mb-4">Temos unidades em Ponta Grossa e Ventania para melhor te atender.</p>
+                
+                <div className="mt-4">
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2 pl-1">Ponta Grossa - PR</h3>
+                    <div className="space-y-3">
+                        <button onClick={() => setActiveModal(ModalType.LOCATION_UVARANAS)} className="w-full flex items-center text-left p-4 rounded-lg bg-gray-100 hover:bg-green-100 hover:border-green-400 border border-transparent transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-500">
+                            <MapPinIcon />
+                            <div className="ml-4 flex-grow">
+                                <p className="font-semibold text-gray-800">Loja Uvaranas</p>
+                                <p className="text-xs text-gray-500">Av. Carlos Cavalcanti, 4296</p>
+                            </div>
+                            <ChevronRightIcon />
+                        </button>
+                        <button onClick={() => setActiveModal(ModalType.LOCATION_CARA_CARA)} className="w-full flex items-center text-left p-4 rounded-lg bg-gray-100 hover:bg-green-100 hover:border-green-400 border border-transparent transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-500">
+                            <MapPinIcon />
+                            <div className="ml-4 flex-grow">
+                                <p className="font-semibold text-gray-800">Loja Nova PG (Cará-Cará)</p>
+                                <p className="text-xs text-gray-500">R. Holga Holleben Mello, 165</p>
+                            </div>
+                            <ChevronRightIcon />
+                        </button>
+                    </div>
                 </div>
+
+                <div className="mt-6">
+                    <h3 className="text-lg font-semibold text-gray-800 mb-2 pl-1">Ventania - PR</h3>
+                    <div className="space-y-3">
+                         <button onClick={() => setActiveModal(ModalType.LOCATION_VENTANIA)} className="w-full flex items-center text-left p-4 rounded-lg bg-gray-100 hover:bg-green-100 hover:border-green-400 border border-transparent transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-500">
+                            <MapPinIcon />
+                            <div className="ml-4 flex-grow">
+                                <p className="font-semibold text-gray-800">Loja Ventania</p>
+                                <p className="text-xs text-gray-500">Av. Anacleto Bueno de Camargo, 987</p>
+                            </div>
+                            <ChevronRightIcon />
+                        </button>
+                    </div>
+                </div>
+
             </Modal>
             
             <Modal isOpen={activeModal === ModalType.LOCATION_UVARANAS} onClose={handleCloseModal}>
@@ -237,6 +256,26 @@ Estou buscando: ${query}`;
                     ></iframe>
                  </div>
                  <a href={MAP_DIRECTION_URL_CARA_CARA} target="_blank" rel="noopener noreferrer" className="mt-4 w-full flex items-center justify-center gap-2 bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-4 rounded-lg transition-transform transform hover:scale-105">
+                    <MapPinIcon />
+                    Ver no Google Maps
+                </a>
+            </Modal>
+
+            <Modal isOpen={activeModal === ModalType.LOCATION_VENTANIA} onClose={handleCloseModal}>
+                 <h2 className="text-xl sm:text-2xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-emerald-700">Nossa Loja - Ventania</h2>
+                 <div className="mt-4 aspect-video w-full rounded-lg overflow-hidden border-2 border-green-500/50">
+                    <iframe
+                        src={MAP_EMBED_URL_VENTANIA}
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen={true}
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="Mapa da Frutaria Benetti em Ventania"
+                    ></iframe>
+                 </div>
+                 <a href={MAP_DIRECTION_URL_VENTANIA} target="_blank" rel="noopener noreferrer" className="mt-4 w-full flex items-center justify-center gap-2 bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-4 rounded-lg transition-transform transform hover:scale-105">
                     <MapPinIcon />
                     Ver no Google Maps
                 </a>
